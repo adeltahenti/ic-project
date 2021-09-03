@@ -91,27 +91,27 @@ const Header = ({ py, color }) => {
               }`}
               onClick={closeHandler}
             >
-              Accueil 1
+              Accueil
             </Link>
             <Link
-              to="/home1"
+              to="/photos"
               className={`link-page block pl-4 py-4 hover:text-orange-600 hover:bg-coolgrayplus-100 ${
-                location.pathname === "/home1" &&
+                location.pathname === "/photos" &&
                 "text-orange-600 bg-coolgrayplus-100"
               }`}
               onClick={closeHandler}
             >
-              Accueil 2
+              Photos
             </Link>
             <Link
-              to="/home2"
+              to="/contact"
               className={`link-page block pl-4 py-4 hover:text-orange-600 hover:bg-coolgrayplus-100 ${
-                location.pathname === "/home2" &&
+                location.pathname === "/contact" &&
                 "text-orange-600 bg-coolgrayplus-100"
               }`}
               onClick={closeHandler}
             >
-              Accueil 3
+              Contact
             </Link>
           </div>
         </div>

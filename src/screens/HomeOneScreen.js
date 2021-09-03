@@ -2,11 +2,11 @@ const HomeOneScreen = () => {
   return (
     <div
       className='bg-cover bg-no-repeat bg-center min-h-screen relative'
-      style={{ backgroundImage: 'url(/images/img1.jpg)' }}
+      style={{ backgroundImage: 'url(/images/img2.jpg)' }}
     >
-      <div className='absolute bg-gradient-to-b from-gray-100 to-gray-200 opacity-25 inset-0 z-0'></div>
+      {/* <div className='absolute bg-gradient-to-b from-gray-100 to-gray-200 opacity-25 inset-0 z-0'></div> */}
       <div className='flex flex-col items-center justify-center h-screen'>
-        <span className='text-2xl md:text-3xl lg:text-5xl text-white animate__animated animate__fadeInLeft animate__delay-0.5s'>
+        <span className='text-white text-2xl md:text-3xl lg:text-5xl animate__animated animate__fadeInLeft animate__delay-0.5s'>
           Ma page d'accueil
         </span>
         <p className='text-white mt-3 animate__animated animate__fadeInRight md:px-3 text-center px-2'>

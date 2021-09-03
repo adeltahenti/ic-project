@@ -2,7 +2,7 @@ const HomeOneScreen = () => {
   return (
     <div
       className='bg-cover bg-no-repeat bg-center min-h-screen relative'
-      style={{ backgroundImage: 'url(/images/img3.jpg)' }}
+      style={{ backgroundImage: 'url(/images/img4.jpg)' }}
     >
       {/* <div className='absolute bg-gradient-to-b from-gray-100 to-gray-200 opacity-25 inset-0 z-0'></div> */}
       <div className='flex flex-col items-center justify-center h-screen'>

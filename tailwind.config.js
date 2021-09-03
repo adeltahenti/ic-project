@@ -1,36 +1,37 @@
-const colors = require('tailwindcss/colors');
+const colors = require("tailwindcss/colors");
 
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
-        allison: ['Allison', 'cursive'],
+        montserrat: ["Montserrat", "sans-serif"],
+        allison: ["Allison", "cursive"],
+        lobster: ["Lobster", "cursive"],
       },
       colors: {
         noir: {
-          100: '#262626',
-          500: '#0c0c0c',
-          900: '#000000',
+          100: "#262626",
+          500: "#0c0c0c",
+          900: "#000000",
         },
         coolgrayplus: {
-          100: '#0f1523',
-          200: '#0d131f',
-          300: '#0b101b',
-          400: '#0a0e17',
-          500: '#080c13',
-          600: '#06090f',
-          700: '#05070b',
-          800: '#030407',
-          900: '#010203',
+          100: "#0f1523",
+          200: "#0d131f",
+          300: "#0b101b",
+          400: "#0a0e17",
+          500: "#080c13",
+          600: "#06090f",
+          700: "#05070b",
+          800: "#030407",
+          900: "#010203",
         },
       },
     },
     colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
+      transparent: "transparent",
+      current: "currentColor",
       white: colors.white,
       black: colors.black,
       bluegray: colors.blueGray,

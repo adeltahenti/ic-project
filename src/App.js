@@ -1,17 +1,17 @@
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import HomeOneScreen from './screens/HomeOneScreen';
-import Header from './components/Header';
-import HomeTwoScreen from './screens/HomeTwoScreen';
-import HomeThreeScreen from './screens/HomeThreeScreen';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Header from "./components/Header";
+import HomeScreen from "./screens/HomeScreen";
+import PhotosScreen from "./screens/PhotosScreen";
+import ContactScreen from "./screens/ContactScreen";
 
 const App = () => {
   return (
     <Router>
       <Header />
-      <main className=''>
-        <Route path='/' component={HomeOneScreen} exact />
-        <Route path='/home1' component={HomeTwoScreen} exact />
-        <Route path='/home2' component={HomeThreeScreen} exact />
+      <main className="">
+        <Route path="/" component={HomeScreen} exact />
+        <Route path="/photos" component={PhotosScreen} exact />
+        <Route path="/contact" component={ContactScreen} exact />
       </main>
     </Router>
   );

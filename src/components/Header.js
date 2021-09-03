@@ -28,10 +28,7 @@ const Header = ({ py, color }) => {
       className={`absolute top-0 left-0 w-full z-10 py-${py} bg-${color}`}
     >
       <div className="mx-4 md:w-10/12 lg:w-1/2 md:mx-auto flex items-center justify-between text-white">
-        <Link
-          to="/"
-          className="flex flex-col items-center font-lobster animate__animated animate__flipInX animate__delay-1s"
-        >
+        <Link to="/" className="flex flex-col items-center font-lobster">
           <span className="text-3xl">Isabelle Cattin</span>
           <span className="text-base">Photographie</span>
         </Link>
@@ -42,23 +39,23 @@ const Header = ({ py, color }) => {
               location.pathname === "/" && "text-orange-600 font-bold"
             }`}
           >
-            Acueil 1
+            Acueil
           </Link>
           <Link
-            to="/home1"
+            to="/photos"
             className={`hover:text-orange-600 hover:font-bold ${
-              location.pathname === "/home1" && "text-orange-600 font-bold"
+              location.pathname === "/photos" && "text-orange-600 font-bold"
             }`}
           >
-            Acueil 2
+            Photos
           </Link>
           <Link
-            to="/home2"
+            to="/contact"
             className={`hover:text-orange-600 hover:font-bold ${
-              location.pathname === "/home2" && "text-orange-600 font-bold"
+              location.pathname === "/contact" && "text-orange-600 font-bold"
             }`}
           >
-            Acueil 3
+            Contact
           </Link>
         </div>
         <div className="md:hidden flex items-center">

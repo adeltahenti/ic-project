@@ -42,7 +42,7 @@ const Header = () => {
               location.pathname === '/' && 'text-orange-600'
             }`}
           >
-            Acueil
+            Accueil
           </Link>
           <DropDown name='Photos' loc={location.pathname} />
           <Link

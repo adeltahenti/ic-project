@@ -7,7 +7,7 @@ import ContactScreen from './screens/ContactScreen';
 const App = () => {
   return (
     <Router>
-      <Header py='7' />
+      <Header />
       <main className=''>
         <Route path='/' component={HomeScreen} exact />
         <Route path='/photos' component={PhotosScreen} exact />

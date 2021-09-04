@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-const Header = ({ py, color }) => {
+const Header = () => {
   const location = useLocation();
 
   useEffect(() => {
@@ -24,10 +24,8 @@ const Header = ({ py, color }) => {
   };
 
   return (
-    <header className={`absolute top-0 left-0 w-full z-10 bg-${color}`}>
-      <div
-        className={`mx-4 md:w-10/12 lg:w-1/2 md:mx-auto flex items-center justify-between text-white my-${py}`}
-      >
+    <header className='absolute top-0 left-0 w-full z-10 bg-transparent'>
+      <div className='mx-4 md:w-10/12 lg:w-1/2 md:mx-auto flex items-center justify-between text-white my-6'>
         <Link to='/' className='flex flex-col items-center font-lobster'>
           <span className='text-3xl'>Isabelle Cattin</span>
           <span className='text-base'>Photographie</span>
@@ -118,11 +116,6 @@ const Header = ({ py, color }) => {
       </div>
     </header>
   );
-};
-
-Header.defaultProps = {
-  py: '5',
-  color: 'transparent',
 };
 
 export default Header;

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import DropDown from './DropDown';
 
 const Header = () => {
   const location = useLocation();
@@ -34,27 +35,28 @@ const Header = () => {
             Photographie
           </span>
         </Link>
-        <div className='md:flex md:flex-row md:items-center md:space-x-3 hidden'>
+        <div className='md:flex md:flex-row md:items-center md:space-x-4 hidden'>
           <Link
             to='/'
-            className={`hover:text-orange-600 hover:font-bold ${
-              location.pathname === '/' && 'text-orange-600 font-bold'
+            className={`hover:text-orange-600 ${
+              location.pathname === '/' && 'text-orange-600'
             }`}
           >
             Acueil
           </Link>
-          <Link
+          <DropDown name='Photos' loc={location.pathname} />
+          {/* <Link
             to='/photos'
             className={`hover:text-orange-600 hover:font-bold ${
               location.pathname === '/photos' && 'text-orange-600 font-bold'
             }`}
           >
             Photos
-          </Link>
+          </Link> */}
           <Link
             to='/contact'
-            className={`hover:text-orange-600 hover:font-bold ${
-              location.pathname === '/contact' && 'text-orange-600 font-bold'
+            className={`hover:text-orange-600 ${
+              location.pathname === '/contact' && 'text-orange-600'
             }`}
           >
             Contact
@@ -80,7 +82,7 @@ const Header = () => {
         </div>
         <div className='mobile-menu hidden md:hidden z-20'>
           <div className='w-3/5 ml-auto h-screen bg-coolgrayplus-400 absolute top-0 right-0 flex flex-col'>
-            <div className='text-right p-5'>
+            <div className='text-right px-5 py-12'>
               <button className='mobile-menu-close'>
                 <i className='fas fa-times text-xl'></i>
               </button>
@@ -95,7 +97,103 @@ const Header = () => {
             >
               Accueil
             </Link>
-            <Link
+            <span className='flex flex-col'>
+              <span
+                className={`link-page block pl-4 py-4 hover:text-orange-600 hover:bg-coolgrayplus-100 ${
+                  (location.pathname === '/photos' ||
+                    location.pathname === '/photos/art' ||
+                    location.pathname === '/photos/alimentation' ||
+                    location.pathname === '/photos/animaux' ||
+                    location.pathname === '/photos/architecture' ||
+                    location.pathname === '/photos/nature' ||
+                    location.pathname === '/photos/paysage' ||
+                    location.pathname === '/photos/portrait') &&
+                  'text-orange-600 bg-coolgrayplus-100'
+                }`}
+              >
+                Photos
+              </span>
+              <Link
+                to='/photos/art'
+                className={`pl-10 py-2 hover:text-orange-600 ${
+                  location.pathname === '/photos/art' &&
+                  'text-orange-600 bg-coolgrayplus-100'
+                }`}
+                onClick={closeHandler}
+              >
+                Art / Abstrait
+              </Link>
+              <Link
+                to='/photos/alimentation'
+                className={`pl-10 py-2 hover:text-orange-600 ${
+                  location.pathname === '/photos/alimentation' &&
+                  'text-orange-600 bg-coolgrayplus-100'
+                }`}
+                onClick={closeHandler}
+              >
+                Alimentation / Culinaire
+              </Link>
+              <Link
+                to='/photos/animaux'
+                className={`pl-10 py-2 hover:text-orange-600 ${
+                  location.pathname === '/photos/animaux' &&
+                  'text-orange-600 bg-coolgrayplus-100'
+                }`}
+                onClick={closeHandler}
+              >
+                Animaux / Faune
+              </Link>
+              <Link
+                to='/photos/architecture'
+                className={`pl-10 py-2 hover:text-orange-600 ${
+                  location.pathname === '/photos/architecture' &&
+                  'text-orange-600 bg-coolgrayplus-100'
+                }`}
+                onClick={closeHandler}
+              >
+                Architecture Intérieur / Extérieur
+              </Link>
+              <Link
+                to='/photos/nature'
+                className={`pl-10 py-2 hover:text-orange-600 ${
+                  location.pathname === '/photos/nature' &&
+                  'text-orange-600 bg-coolgrayplus-100'
+                }`}
+                onClick={closeHandler}
+              >
+                Nature / Flore
+              </Link>
+              <Link
+                to='/photos/paysage'
+                className={`pl-10 py-2 hover:text-orange-600 ${
+                  location.pathname === '/photos/paysage' &&
+                  'text-orange-600 bg-coolgrayplus-100'
+                }`}
+                onClick={closeHandler}
+              >
+                Paysage / Voyage
+              </Link>
+              <Link
+                to='/photos/portrait'
+                className={`pl-10 py-2 hover:text-orange-600 ${
+                  location.pathname === '/photos/portrait' &&
+                  'text-orange-600 bg-coolgrayplus-100'
+                }`}
+                onClick={closeHandler}
+              >
+                Portrait
+              </Link>
+              <Link
+                to='/photos'
+                className={`pl-10 py-2 hover:text-orange-600 ${
+                  location.pathname === '/photos' && 'text-orange-600'
+                }`}
+                onClick={closeHandler}
+              >
+                Toutes ...
+              </Link>
+            </span>
+            {/* <Link
               to='/photos'
               className={`link-page block pl-4 py-4 hover:text-orange-600 hover:bg-coolgrayplus-100 ${
                 location.pathname === '/photos' &&
@@ -104,7 +202,7 @@ const Header = () => {
               onClick={closeHandler}
             >
               Photos
-            </Link>
+            </Link> */}
             <Link
               to='/contact'
               className={`link-page block pl-4 py-4 hover:text-orange-600 hover:bg-coolgrayplus-100 ${

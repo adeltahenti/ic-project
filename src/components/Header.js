@@ -27,8 +27,12 @@ const Header = () => {
     <header className='absolute top-0 left-0 w-full z-10 bg-transparent'>
       <div className='mx-4 md:w-10/12 lg:w-1/2 md:mx-auto flex items-center justify-between text-white my-6'>
         <Link to='/' className='flex flex-col items-center font-lobster'>
-          <span className='text-3xl'>Isabelle Cattin</span>
-          <span className='text-base'>Photographie</span>
+          <span className='' style={{ fontSize: '2rem' }}>
+            Isabelle Cattin
+          </span>
+          <span className='' style={{ fontSize: '1rem' }}>
+            Photographie
+          </span>
         </Link>
         <div className='md:flex md:flex-row md:items-center md:space-x-3 hidden'>
           <Link

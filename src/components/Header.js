@@ -26,7 +26,7 @@ const Header = ({ py, color }) => {
   return (
     <header className={`absolute top-0 left-0 w-full z-10 bg-${color}`}>
       <div
-        className={`mx-4 md:w-10/12 lg:w-1/2 md:mx-auto flex items-center justify-between text-white py-${py}`}
+        className={`mx-4 md:w-10/12 lg:w-1/2 md:mx-auto flex items-center justify-between text-white my-${py}`}
       >
         <Link to='/' className='flex flex-col items-center font-lobster'>
           <span className='text-3xl'>Isabelle Cattin</span>

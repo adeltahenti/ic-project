@@ -45,14 +45,6 @@ const Header = () => {
             Acueil
           </Link>
           <DropDown name='Photos' loc={location.pathname} />
-          {/* <Link
-            to='/photos'
-            className={`hover:text-orange-600 hover:font-bold ${
-              location.pathname === '/photos' && 'text-orange-600 font-bold'
-            }`}
-          >
-            Photos
-          </Link> */}
           <Link
             to='/contact'
             className={`hover:text-orange-600 ${
@@ -89,7 +81,7 @@ const Header = () => {
             </div>
             <Link
               to='/'
-              className={`link-page block pl-4 py-4 hover:text-orange-600 hover:bg-coolgrayplus-100 ${
+              className={`block pl-4 py-4 hover:text-orange-600 hover:bg-coolgrayplus-100 ${
                 location.pathname === '/' &&
                 'text-orange-600 bg-coolgrayplus-100'
               }`}
@@ -99,7 +91,7 @@ const Header = () => {
             </Link>
             <span className='flex flex-col'>
               <span
-                className={`link-page block pl-4 py-4 hover:text-orange-600 hover:bg-coolgrayplus-100 ${
+                className={`block pl-4 py-4 hover:text-orange-600 hover:bg-coolgrayplus-100 ${
                   (location.pathname === '/photos' ||
                     location.pathname === '/photos/art' ||
                     location.pathname === '/photos/alimentation' ||
@@ -193,19 +185,9 @@ const Header = () => {
                 Toutes ...
               </Link>
             </span>
-            {/* <Link
-              to='/photos'
-              className={`link-page block pl-4 py-4 hover:text-orange-600 hover:bg-coolgrayplus-100 ${
-                location.pathname === '/photos' &&
-                'text-orange-600 bg-coolgrayplus-100'
-              }`}
-              onClick={closeHandler}
-            >
-              Photos
-            </Link> */}
             <Link
               to='/contact'
-              className={`link-page block pl-4 py-4 hover:text-orange-600 hover:bg-coolgrayplus-100 ${
+              className={`block pl-4 py-4 hover:text-orange-600 hover:bg-coolgrayplus-100 ${
                 location.pathname === '/contact' &&
                 'text-orange-600 bg-coolgrayplus-100'
               }`}

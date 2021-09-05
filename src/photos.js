@@ -1,0 +1,58 @@
+const photos = [
+  {
+    _id: '1',
+    name: 'Photo 1',
+    image: '/images/photo1.jpg',
+    description: 'Photo prise à ....',
+    category: 'nature',
+    rating: 4.5,
+    numReviews: 12,
+  },
+  {
+    _id: '2',
+    name: 'Photo 2',
+    image: '/images/photo2.jpg',
+    description: 'Photo prise à ....',
+    category: 'art',
+    rating: 4.5,
+    numReviews: 12,
+  },
+  {
+    _id: '3',
+    name: 'Photo 3',
+    image: '/images/photo3.jpg',
+    description: 'Photo prise à ....',
+    category: 'nature',
+    rating: 4.5,
+    numReviews: 12,
+  },
+  {
+    _id: '4',
+    name: 'Photo 4',
+    image: '/images/photo4.jpg',
+    description: 'Photo prise à ....',
+    category: 'art',
+    rating: 4.5,
+    numReviews: 12,
+  },
+  {
+    _id: '5',
+    name: 'Photo 5',
+    image: '/images/photo5.jpg',
+    description: 'Photo prise à ....',
+    category: 'architecture',
+    rating: 4.5,
+    numReviews: 12,
+  },
+  {
+    _id: '6',
+    name: 'Photo 6',
+    image: '/images/photo6.jpg',
+    description: 'Photo prise à ....',
+    category: 'nature',
+    rating: 4.5,
+    numReviews: 12,
+  },
+];
+
+export default photos;

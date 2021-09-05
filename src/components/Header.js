@@ -4,6 +4,17 @@ import DropDown from './DropDown';
 
 const Header = () => {
   const location = useLocation();
+  const locationUrl = location.pathname;
+  let loc;
+  // console.log(locationUrl.lastIndexOf('/'));
+
+  if (locationUrl.lastIndexOf('/') > 7) {
+    loc = location.pathname.slice(0, locationUrl.lastIndexOf('/'));
+  } else {
+    loc = location.pathname;
+  }
+
+  // console.log(loc);
 
   useEffect(() => {
     const btn = document.querySelector('button.mobile-menu-button');
@@ -39,16 +50,16 @@ const Header = () => {
           <Link
             to='/'
             className={`hover:text-orange-600 ${
-              location.pathname === '/' && 'text-orange-600'
+              loc === '/' && 'text-orange-600'
             }`}
           >
             Accueil
           </Link>
-          <DropDown name='Photos' loc={location.pathname} />
+          <DropDown name='Photos' loc={loc} />
           <Link
             to='/contact'
             className={`hover:text-orange-600 ${
-              location.pathname === '/contact' && 'text-orange-600'
+              loc === '/contact' && 'text-orange-600'
             }`}
           >
             Contact
@@ -82,8 +93,7 @@ const Header = () => {
             <Link
               to='/'
               className={`block pl-4 py-4 hover:text-orange-600 hover:bg-coolgrayplus-100 ${
-                location.pathname === '/' &&
-                'text-orange-600 bg-coolgrayplus-100'
+                loc === '/' && 'text-orange-600 bg-coolgrayplus-100'
               }`}
               onClick={closeHandler}
             >
@@ -92,14 +102,14 @@ const Header = () => {
             <span className='flex flex-col'>
               <span
                 className={`block pl-4 py-4 hover:text-orange-600 hover:bg-coolgrayplus-100 ${
-                  (location.pathname === '/photos' ||
-                    location.pathname === '/photos/art' ||
-                    location.pathname === '/photos/alimentation' ||
-                    location.pathname === '/photos/animaux' ||
-                    location.pathname === '/photos/architecture' ||
-                    location.pathname === '/photos/nature' ||
-                    location.pathname === '/photos/paysage' ||
-                    location.pathname === '/photos/portrait') &&
+                  (loc === '/photos' ||
+                    loc === '/photos/art' ||
+                    loc === '/photos/alimentation' ||
+                    loc === '/photos/animaux' ||
+                    loc === '/photos/architecture' ||
+                    loc === '/photos/nature' ||
+                    loc === '/photos/paysage' ||
+                    loc === '/photos/portrait') &&
                   'text-orange-600 bg-coolgrayplus-100'
                 }`}
               >
@@ -108,8 +118,7 @@ const Header = () => {
               <Link
                 to='/photos/art'
                 className={`pl-10 py-2 hover:text-orange-600 ${
-                  location.pathname === '/photos/art' &&
-                  'text-orange-600 bg-coolgrayplus-100'
+                  loc === '/photos/art' && 'text-orange-600 bg-coolgrayplus-100'
                 }`}
                 onClick={closeHandler}
               >
@@ -118,7 +127,7 @@ const Header = () => {
               <Link
                 to='/photos/alimentation'
                 className={`pl-10 py-2 hover:text-orange-600 ${
-                  location.pathname === '/photos/alimentation' &&
+                  loc === '/photos/alimentation' &&
                   'text-orange-600 bg-coolgrayplus-100'
                 }`}
                 onClick={closeHandler}
@@ -128,7 +137,7 @@ const Header = () => {
               <Link
                 to='/photos/animaux'
                 className={`pl-10 py-2 hover:text-orange-600 ${
-                  location.pathname === '/photos/animaux' &&
+                  loc === '/photos/animaux' &&
                   'text-orange-600 bg-coolgrayplus-100'
                 }`}
                 onClick={closeHandler}
@@ -138,7 +147,7 @@ const Header = () => {
               <Link
                 to='/photos/architecture'
                 className={`pl-10 py-2 hover:text-orange-600 ${
-                  location.pathname === '/photos/architecture' &&
+                  loc === '/photos/architecture' &&
                   'text-orange-600 bg-coolgrayplus-100'
                 }`}
                 onClick={closeHandler}
@@ -148,7 +157,7 @@ const Header = () => {
               <Link
                 to='/photos/nature'
                 className={`pl-10 py-2 hover:text-orange-600 ${
-                  location.pathname === '/photos/nature' &&
+                  loc === '/photos/nature' &&
                   'text-orange-600 bg-coolgrayplus-100'
                 }`}
                 onClick={closeHandler}
@@ -158,7 +167,7 @@ const Header = () => {
               <Link
                 to='/photos/paysage'
                 className={`pl-10 py-2 hover:text-orange-600 ${
-                  location.pathname === '/photos/paysage' &&
+                  loc === '/photos/paysage' &&
                   'text-orange-600 bg-coolgrayplus-100'
                 }`}
                 onClick={closeHandler}
@@ -168,7 +177,7 @@ const Header = () => {
               <Link
                 to='/photos/portrait'
                 className={`pl-10 py-2 hover:text-orange-600 ${
-                  location.pathname === '/photos/portrait' &&
+                  loc === '/photos/portrait' &&
                   'text-orange-600 bg-coolgrayplus-100'
                 }`}
                 onClick={closeHandler}
@@ -178,7 +187,7 @@ const Header = () => {
               <Link
                 to='/photos'
                 className={`pl-10 py-2 hover:text-orange-600 ${
-                  location.pathname === '/photos' && 'text-orange-600'
+                  loc === '/photos' && 'text-orange-600'
                 }`}
                 onClick={closeHandler}
               >
@@ -188,8 +197,7 @@ const Header = () => {
             <Link
               to='/contact'
               className={`block pl-4 py-4 hover:text-orange-600 hover:bg-coolgrayplus-100 ${
-                location.pathname === '/contact' &&
-                'text-orange-600 bg-coolgrayplus-100'
+                loc === '/contact' && 'text-orange-600 bg-coolgrayplus-100'
               }`}
               onClick={closeHandler}
             >
